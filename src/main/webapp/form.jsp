@@ -33,7 +33,7 @@
         </form>
 
         <p class="mt-3">
-            <a href="" class="btn btn-secondary">목록</a>
+            <a href="index.jsp" class="btn btn-secondary">목록</a>
         </p>
     </div>
 

@@ -30,17 +30,24 @@ response.getWriter().println(list);
         <table class="table table-bordered mt-3">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col">성</th>
-                    <th scope="col">이름</th>
+                    <th scope="col">성/이름</th>
                     <th scope="col">이메일</th>
+                    <th scope="col">도구</th>
                 </tr>
             </thead>
             <tbody>
+            <% Iterator<EmailVo> it = list.iterator()
+            while (it.hasNext()) {
+            	EmailVo vo = it.next();
+            %>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><%= vo.getLastName() %><%= vo.getFirstName() %></td>
+                    <td><%= vo.getEmail() %></td>
+                    <td><a class="btn btn-danger" href="delete.jsp?no=<%= vo.getNo() %>"> 삭제</a></td>
                 </tr>
+            <%
+            }
+            %>    
             </tbody>
         </table>
         <br />
