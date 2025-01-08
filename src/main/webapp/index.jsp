@@ -33,7 +33,7 @@ function confirm_delete(no) {
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">메일링 리스트</h1>
+        <h1 class="mt-5">메일링 리스트 (Model 1))</h1>
 <%
 EmailListDao dao = new EmailListDaoImpl(dbUser, dbPass);
 List<EmailVo> list = dao.getList();
